@@ -1,0 +1,13 @@
+id,name,city,lat,lon,road_density,industrial,state
+DL_001,Anand Vihar,Delhi,28.6469,77.3164,5,1,Delhi
+DL_002,ITO,Delhi,28.6289,77.2411,4,0,Delhi
+DL_003,Dwarka Sector 8,Delhi,28.5795,77.0585,3,0,Delhi
+DL_004,Jahangirpuri,Delhi,28.7298,77.1624,3,1,Delhi
+MU_001,Bandra Kurla Complex,Mumbai,19.0632,72.8677,4,0,Maharashtra
+MU_002,Chembur,Mumbai,19.0522,72.8994,3,1,Maharashtra
+MU_003,Worli,Mumbai,19.0148,72.816,3,0,Maharashtra
+KO_001,Jadavpur,Kolkata,22.4988,88.3714,3,1,West Bengal
+KO_002,Rabindra Sarani,Kolkata,22.5726,88.3639,4,0,West Bengal
+CH_001,Manali,Chennai,13.1654,80.264,2,1,Tamil Nadu
+BG_001,BTM Layout,Bengaluru,12.9141,77.6101,4,0,Karnataka
+HY_001,Bollaram,Hyderabad,17.4806,78.3747,2,1,Telangana

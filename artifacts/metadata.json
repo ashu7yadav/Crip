@@ -1,0 +1,197 @@
+{
+  "trained_at": "2026-09-30T17:09:36.715945",
+  "stations": [
+    {
+      "id": "DL_001",
+      "name": "Anand Vihar",
+      "city": "Delhi",
+      "lat": 28.6469,
+      "lon": 77.3164,
+      "road_density": 5,
+      "industrial": 1,
+      "state": "Delhi"
+    },
+    {
+      "id": "DL_002",
+      "name": "ITO",
+      "city": "Delhi",
+      "lat": 28.6289,
+      "lon": 77.2411,
+      "road_density": 4,
+      "industrial": 0,
+      "state": "Delhi"
+    },
+    {
+      "id": "DL_003",
+      "name": "Dwarka Sector 8",
+      "city": "Delhi",
+      "lat": 28.5795,
+      "lon": 77.0585,
+      "road_density": 3,
+      "industrial": 0,
+      "state": "Delhi"
+    },
+    {
+      "id": "DL_004",
+      "name": "Jahangirpuri",
+      "city": "Delhi",
+      "lat": 28.7298,
+      "lon": 77.1624,
+      "road_density": 3,
+      "industrial": 1,
+      "state": "Delhi"
+    },
+    {
+      "id": "MU_001",
+      "name": "Bandra Kurla Complex",
+      "city": "Mumbai",
+      "lat": 19.0632,
+      "lon": 72.8677,
+      "road_density": 4,
+      "industrial": 0,
+      "state": "Maharashtra"
+    },
+    {
+      "id": "MU_002",
+      "name": "Chembur",
+      "city": "Mumbai",
+      "lat": 19.0522,
+      "lon": 72.8994,
+      "road_density": 3,
+      "industrial": 1,
+      "state": "Maharashtra"
+    },
+    {
+      "id": "MU_003",
+      "name": "Worli",
+      "city": "Mumbai",
+      "lat": 19.0148,
+      "lon": 72.816,
+      "road_density": 3,
+      "industrial": 0,
+      "state": "Maharashtra"
+    },
+    {
+      "id": "KO_001",
+      "name": "Jadavpur",
+      "city": "Kolkata",
+      "lat": 22.4988,
+      "lon": 88.3714,
+      "road_density": 3,
+      "industrial": 1,
+      "state": "West Bengal"
+    },
+    {
+      "id": "KO_002",
+      "name": "Rabindra Sarani",
+      "city": "Kolkata",
+      "lat": 22.5726,
+      "lon": 88.3639,
+      "road_density": 4,
+      "industrial": 0,
+      "state": "West Bengal"
+    },
+    {
+      "id": "CH_001",
+      "name": "Manali",
+      "city": "Chennai",
+      "lat": 13.1654,
+      "lon": 80.264,
+      "road_density": 2,
+      "industrial": 1,
+      "state": "Tamil Nadu"
+    },
+    {
+      "id": "BG_001",
+      "name": "BTM Layout",
+      "city": "Bengaluru",
+      "lat": 12.9141,
+      "lon": 77.6101,
+      "road_density": 4,
+      "industrial": 0,
+      "state": "Karnataka"
+    },
+    {
+      "id": "HY_001",
+      "name": "Bollaram",
+      "city": "Hyderabad",
+      "lat": 17.4806,
+      "lon": 78.3747,
+      "road_density": 2,
+      "industrial": 1,
+      "state": "Telangana"
+    }
+  ],
+  "feature_cols": [
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos",
+    "day_of_week",
+    "is_weekend",
+    "is_night",
+    "is_crop_burn_season",
+    "is_festival",
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "wind_dir_sin",
+    "wind_dir_cos",
+    "rainfall",
+    "blh",
+    "pm_ratio",
+    "road_density",
+    "industrial_zone",
+    "aqi_lag1h",
+    "aqi_lag3h",
+    "aqi_lag6h",
+    "aqi_lag12h",
+    "aqi_lag24h",
+    "pm25_lag1h",
+    "pm25_lag3h",
+    "pm25_lag6h",
+    "pm25_lag12h",
+    "pm25_lag24h",
+    "aqi_roll3h_mean",
+    "aqi_roll6h_mean",
+    "aqi_roll24h_mean",
+    "aqi_roll3h_std",
+    "aqi_roll6h_std",
+    "aqi_roll24h_std",
+    "pm25_roll3h_mean",
+    "pm25_roll6h_mean",
+    "pm25_roll24h_mean"
+  ],
+  "horizons": [
+    6,
+    12,
+    24,
+    48
+  ],
+  "metrics": {
+    "6h": {
+      "rmse": 32.07,
+      "mae": 23.24,
+      "r2": 0.374,
+      "skill_score": 0.346
+    },
+    "12h": {
+      "rmse": 32.15,
+      "mae": 23.32,
+      "r2": 0.371,
+      "skill_score": 0.286
+    },
+    "24h": {
+      "rmse": 32.32,
+      "mae": 23.41,
+      "r2": 0.364,
+      "skill_score": 0.285
+    },
+    "48h": {
+      "rmse": 32.49,
+      "mae": 23.55,
+      "r2": 0.357,
+      "skill_score": 0.29
+    }
+  }
+}
