@@ -17,6 +17,16 @@ import joblib
 warnings.filterwarnings("ignore")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+def render_plotly(fig):
+    try:
+        st.plotly_chart(fig, use_container_width=True)
+    except Exception:
+        try:
+            st.plotly_chart(fig, width='stretch')
+        except Exception:
+            st.plotly_chart(fig)
+
+
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="CRIP — CleanAir Resilience Intelligence Platform",
@@ -557,7 +567,7 @@ with tab1:
             yaxis2=dict(overlaying="y", side="right", title="PM2.5 (µg/m³)"),
             hovermode="x unified",
         )
-        st.plotly_chart(fig, width='stretch')
+        render_plotly(fig)
 
     with col_resil:
         st.markdown('<div class="section-header">🛡️ Climate Resilience Score</div>', unsafe_allow_html=True)
@@ -588,7 +598,7 @@ with tab1:
             height=200, margin=dict(l=20, r=20, t=30, b=0),
             paper_bgcolor="rgba(0,0,0,0)", font=dict(color="#e2e8f0")
         )
-        st.plotly_chart(fig_gauge, width='stretch')
+        render_plotly(fig_gauge)
 
         # Radar
         fig_radar = go.Figure(go.Scatterpolar(
@@ -606,7 +616,7 @@ with tab1:
             paper_bgcolor="rgba(0,0,0,0)", font=dict(color="#e2e8f0", size=9),
             showlegend=False, height=220, margin=dict(l=20, r=20, t=10, b=10)
         )
-        st.plotly_chart(fig_radar, width='stretch')
+        render_plotly(fig_radar)
         st.markdown('<div class="disclaimer">Informational indicator only. Not an official safety rating.</div>', unsafe_allow_html=True)
 
     # ── Current weather panel ─────────────────────────────────────────────────
@@ -800,7 +810,7 @@ with tab3:
                 yaxis=dict(gridcolor="rgba(255,255,255,0.05)"),
                 height=300, margin=dict(l=0, r=60, t=40, b=0),
             )
-            st.plotly_chart(fig_shap, width='stretch')
+            render_plotly(fig_shap)
         else:
             st.info("SHAP values computing — ensure shap package is installed.")
 
@@ -865,7 +875,7 @@ with tab4:
         yaxis=dict(gridcolor="rgba(255,255,255,0.05)", title="Hours"),
         height=250, margin=dict(l=0, r=0, t=10, b=0),
     )
-    st.plotly_chart(fig_cat, width='stretch')
+    render_plotly(fig_cat)
 
 # ═══════════════════════════════════════════════════════
 # TAB 5: WHAT-IF SIMULATOR
@@ -965,7 +975,7 @@ with tab5:
                 yaxis=dict(gridcolor="rgba(255,255,255,0.05)", range=[0, max(base_aqi, sim_aqi) * 1.3]),
                 legend=dict(bgcolor="rgba(0,0,0,0)"),
             )
-            st.plotly_chart(fig_sim, width='stretch')
+            render_plotly(fig_sim)
 
             if result["scenario_description"] != "No change":
                 st.success(f"📌 Scenario: **{result['scenario_description']}**")
